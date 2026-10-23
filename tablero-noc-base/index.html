@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tablero NOC · Sesión 8</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header id="cabecera">
+  <div class="marca">
+    <span class="logo">NOC</span>
+    <div><b>Tablero de operaciones de red</b><small>Datos sintéticos · uso en clase</small></div>
+  </div>
+  <div id="filtros"></div>
+  <button id="btn-copiloto" class="btn ghost" title="Mostrar u ocultar el copiloto">Copiloto IA</button>
+</header>
+
+<div id="cuerpo">
+  <nav id="pestanas" aria-label="Módulos"></nav>
+  <main id="principal"><div id="cargando">Cargando datos…</div></main>
+  <aside id="copiloto" aria-label="Copiloto de IA"></aside>
+</div>
+<div id="tt" role="tooltip"></div>
+
+<!-- Núcleo (no se toca en los talleres) -->
+<script src="datos/datos.js"></script>
+<script src="js/nucleo.js"></script>
+<script src="js/graficos.js"></script>
+<script src="js/herramientas.js"></script>
+<script src="js/ia.js"></script>
+<script src="js/copiloto.js"></script>
+<!-- Módulos de base -->
+<script src="js/modulos/resumen.js"></script>
+<script src="js/modulos/mapa.js"></script>
+<script src="js/modulos/series.js"></script>
+<script src="js/modulos/misdatos.js"></script>
+<!-- Piezas de los talleres: si el archivo no existe, el tablero lo ignora y muestra la pestaña "pendiente" -->
+<script src="js/pendientes.js"></script>
+<script src="js/modulos/anomalias.js" onerror="void 0"></script>
+<script src="js/modulos/incidentes.js" onerror="void 0"></script>
+<script src="js/modulos/insights.js" onerror="void 0"></script>
+<script src="js/modulos/reportes.js" onerror="void 0"></script>
+<!-- Retos extra -->
+<script src="js/modulos/pronostico.js" onerror="void 0"></script>
+<script src="js/modulos/prioridad.js" onerror="void 0"></script>
+<script src="js/modulos/perfiles.js" onerror="void 0"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

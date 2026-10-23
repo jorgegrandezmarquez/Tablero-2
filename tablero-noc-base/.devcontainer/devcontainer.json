@@ -1,0 +1,23 @@
+{
+  "name": "Tablero NOC con IA",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
+  "hostRequirements": { "cpus": 2 },
+  "forwardPorts": [5500],
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code",
+  "postStartCommand": "nohup node servir.mjs > /dev/null 2>&1 &",
+  "customizations": {
+    "vscode": {
+      "settings": { "workbench.startupEditor": "readme" },
+      "extensions": ["esbenp.prettier-vscode"]
+    }
+  },
+  "containerEnv": { "ANTHROPIC_MODEL": "claude-haiku-5-5" },
+  "portsAttributes": {
+    "5500": { "label": "Tablero NOC (ábralo con el globo)", "onAutoForward": "notify" }
+  },
+  "secrets": {
+    "ANTHROPIC_API_KEY": {
+      "description": "Clave de la IA que le entrega el instructor (con saldo y tiempo limitados). No la escriba en ningún archivo."
+    }
+  }
+}
